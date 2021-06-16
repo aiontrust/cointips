@@ -1,1 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoinTipsApp.MainPage">
+
+    <AbsoluteLayout>
+        <Frame BackgroundColor="Goldenrod" Padding="118,18" CornerRadius="0">
+            <Label Text="¢oinTips" HorizontalTextAlignment="Center" TextColor="White" FontSize="46" />
+        </Frame>
+        <Label Text="Welcome to CoinTips!" TextColor="DarkSlateGray" FontSize="30" FontAttributes="Bold" Padding="18,100,20,0"/>
+
+        <Label FontSize="18" Padding="18,145,0,0">
+            <Label.FormattedText>
+            <FormattedString>
+              <FormattedString.Spans>
+                <Span Text="Learn more at "/>
+                        <Span Text="https://cointips.io" TextColor="Goldenrod"
+                              FontSize="18"  TextTransform="Lowercase">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ClickCommand}"
+                                                      CommandParameter="https://cointips.io" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString.Spans>
+            </FormattedString>
+          </Label.FormattedText>
+        </Label>
+        <Label Text="You've scanned a tip code for..." FontSize="18" FontAttributes="Italic" Padding="18,176,0,0"/>
+
+        <ImageButton Source="QRScannerIcon.png" 
+                     BackgroundColor="Transparent"   
+                     AbsoluteLayout.LayoutBounds=".96,169,36,36"
+                     AbsoluteLayout.LayoutFlags="XProportional"
+                     IsEnabled="True" Clicked="ImageButton_Clicked" />
+
+        <Frame BackgroundColor="Black" 
+               AbsoluteLayout.LayoutBounds="10,209,.95,.444"
+               AbsoluteLayout.LayoutFlags="SizeProportional" >
+            
+            <Label x:Name="txtBarcode" Text="QR Code Info" 
+               TextColor="Pink" FontSize="48"
+               HorizontalTextAlignment="Center" 
+               AbsoluteLayout.LayoutBounds="0.5,0.55,300,75"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+         </Frame>
+
+        <Label Text="To transfer tokens, enter wallet address." FontSize="18" Padding="18,505,0,0">
+        </Label>
+
+        <Entry x:Name="newAdrs"  Placeholder="                                -YoUrWaLlEtAdDrEsS-" 
+               BackgroundColor="WhiteSmoke" FontSize="Subtitle"
+               AbsoluteLayout.LayoutBounds=".007,0.880,420,50"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <Button x:Name="xferButton" Text="Xfer Tokens" IsEnabled="True"
+                BackgroundColor="Gray" FontAttributes="Bold" FontSize="Large" 
+                AbsoluteLayout.LayoutBounds="0.5,0.99,381,60"
+                AbsoluteLayout.LayoutFlags="PositionProportional" 
+                Clicked="xferButton_Clicked"/>
+
+    </AbsoluteLayout>
+
+</ContentPage>
 
