@@ -2,13 +2,13 @@
 Cold Wallet QR Scanner (single screen)
 
 Features:
-   - Downloadable paper wallet
+   - Downloadable paper wallet (CoinTips Note)
    - QR Code opens app or A/P stores
    - Display window shows type of coin, price, & amount (possibly CMC API)
    - Transient storage wallet (Live Internal Wallet)
    - Address placeholder input
-   - Press "Xfer Tokens" to transfer
-   - Display reads "Transaction Successful!" when sent
+   - Press "Xfer Tokens" to transfer to exterior wall
+   - Display reads "Transaction Successful!" when sent (not configured yet)
 
 Link on screen to website: cointips.io
 Features:
